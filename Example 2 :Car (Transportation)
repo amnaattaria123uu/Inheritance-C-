@@ -1,0 +1,34 @@
+using System;
+
+class Vehicle
+{
+    public int Speed;
+
+    public void ShowSpeed()
+    {
+        Console.WriteLine("Speed: " + Speed + " km/h");
+    }
+}
+
+class Car : Vehicle
+{
+    public string Brand;
+
+    public void ShowCar()
+    {
+        ShowSpeed();
+        Console.WriteLine("Brand: " + Brand);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Car c = new Car();
+        c.Speed = 120;
+        c.Brand = "Toyota";
+
+        c.ShowCar();
+    }
+}
