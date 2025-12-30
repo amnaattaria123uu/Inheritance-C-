@@ -1,0 +1,34 @@
+using System;
+
+class Employee
+{
+    public double Salary;
+
+    public void ShowSalary()
+    {
+        Console.WriteLine("Salary: " + Salary);
+    }
+}
+
+class Teacher : Employee
+{
+    public string Subject;
+
+    public void ShowTeacher()
+    {
+        ShowSalary();
+        Console.WriteLine("Subject: " + Subject);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Teacher t = new Teacher();
+        t.Salary = 45000;
+        t.Subject = "Math";
+
+        t.ShowTeacher();
+    }
+}
